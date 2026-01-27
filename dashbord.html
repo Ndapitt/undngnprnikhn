@@ -6,14 +6,16 @@
 <title>Undangan Pernikahan</title>
 
 <style>
-body {
+    body {
     font-family: Arial, sans-serif;
     background: #f9f4ef;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
 }
+
 
 .box {
     background: white;
@@ -114,20 +116,65 @@ h1 {
 .pesan-card b {
     color: #7f5539;
 }
-.hapus-btn {
-    margin-top: 8px;
-    padding: 5px 10px;
-    background: #c1121f;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 12px;
-    cursor: pointer;
+
+.lokasi {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #f0e7df;
+    border-radius: 10px;
+    background: #fbf7f3;
 }
 
-.hapus-btn:hover {
-    background: #9b0f18;
+.lokasi a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #7f5539;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
 }
+
+.lokasi a:hover {
+    background: #6b4a33;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    border: 0;
+    margin-top: 10px;
+}
+.terimakasih {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #f0e7df;
+    border-radius: 10px;
+    background: #fbf7f3;
+    color: #7f5539;
+    font-size: 14px;
+    line-height: 1.6;
+}
+.btn-kembali {
+    margin-top: 20px;
+    width:40%;
+    background: transparent;
+    color: #7f5539;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-kembali:hover {
+    background:red;
+    color: white;
+}
+
+
 
 </style>
 </head>
@@ -135,20 +182,28 @@ h1 {
 <body>
 <div class="box">
     <h1>Undangan Pernikahan</h1>
+
     <img src="gmbar/images.jfif" alt="Foto Mempelai" class="img-mempelai">
 
     <div class="info">
         <p><span>Nama Pengantin:</span><br>
         Fulan & Fulanah</p>
 
-        <p><span>Lokasi Acara:</span><br>
-        Gedung Serbaguna Bahagia, Jakarta</p>
+         <div class="lokasi">
+        <p><span>📍 Lokasi Pernikahan:</span><br>
+         Gedung Serbaguna Bahagia, Jakarta</p>
+
+        <a href="https://www.google.com/maps/search/pondok+riyadhul+ulum,+ujung+batu+timur+jalan+setia+budi"
+       target="_blank">
+       Buka di Google Maps
+       </a>
+    </div>
+
 
         <p><span>Waktu:</span><br>
         Sabtu, 10 Mei 2026 | 10.00 WIB</p>
     </div>
-
-    <!-- FORM KESAN & PESAN -->
+   
     <div class="form">
         <h3>💌 Kesan & Pesan</h3>
         <input type="text" id="namaPengirim" placeholder="Nama Anda..." />
@@ -157,10 +212,18 @@ h1 {
 
         <div id="daftarPesan"></div>
     </div>
+    <div class="terimakasih">
+    <p>
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami
+        apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+        memberikan doa restu.
 
-    <button onclick="kembali()">Kembali</button>
+    <p><b>Atas kehadiran dan doa restunya, kami ucapkan</b></p>
+
+    <p><b>Terima Kasih 🤍</b></p>
+    <button class="btn-kembali" onclick="kembali()">Kembali</button>
+    </div>
 </div>
-
 <script>
 
 function kirimPesan() {

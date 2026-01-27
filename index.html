@@ -7,25 +7,25 @@
 </head>
 
 <body>
+   <div class="box">
+    <h1>Selamat Datang</h1>
 
-    <div class="box">
-       <h1>Selamat Datang</h1>
-       <p>Kepada Yth.</p>
-       <input type="text" id="namaTamu" placeholder="Nama Tamu">
-       <br>
-       <button onclick="bukaUndangan()">Buka Undangan</button>
-    </div>
+    <p>Kepada Yth.</p>
+    <p><b>Bapak / Ibu / Saudara / i</b></p>
 
+    <p class="ucapan">
+        Terima kasih telah meluangkan waktu untuk
+        membuka undangan pernikahan kami.
+        Merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Bapak/Ibu/Saudara/i
+        berkenan hadir dan memberikan doa restu.
+    </p>
+    <button onclick="bukaUndangan()">Buka Undangan</button>
+</div> 
 <script>
    function bukaUndangan() {
-    let nama = document.getElementById("namaTamu").value;
-    if (nama === "dinda") {
-        alert("Silakan isi nama tamu");
-        return;
-    }
-    localStorage.setItem("tamu", nama);
     window.location.href = "halaman2.html";
-   }
+}
 </script>
 
 </body>

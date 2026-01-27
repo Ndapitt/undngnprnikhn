@@ -6,25 +6,71 @@
 <title>Selamat Datang</title>
 </head>
 
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f4ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 420px;
+}
+
+h1 {
+    color: #b08968;
+}
+
+.ucapan {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #b08968;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.nama-tamu {
+    font-size: 18px;
+    font-weight: bold;
+    color: #7f5539;
+    margin-bottom: 15px;
+}
+</style>
 <body>
    <div class="box">
     <h1>Selamat Datang</h1>
 
-    <p>Kepada Yth.</p>
-    <p><b>Bapak / Ibu / Saudara / i</b></p>
+    <p>Kepada Yth saudara / i</p>
+    <div class="nama-tamu"> Dinda Fitrian Agustin</div>
 
     <p class="ucapan">
         Terima kasih telah meluangkan waktu untuk
         membuka undangan pernikahan kami.
         Merupakan suatu kehormatan dan kebahagiaan
-        bagi kami apabila Bapak/Ibu/Saudara/i
+        bagi kami apabila Saudara/i
         berkenan hadir dan memberikan doa restu.
     </p>
     <button onclick="bukaUndangan()">Buka Undangan</button>
 </div> 
 <script>
    function bukaUndangan() {
-    window.location.href = "halaman2.html";
+    window.location.href = "dashbord.html";
 }
 </script>
 

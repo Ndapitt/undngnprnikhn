@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f4ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 520px;
+}
+
+h1 {
+    color: #b08968;
+    margin-bottom: 5px;
+}
+
+.subjudul {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.img-mempelai {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin: 15px auto;
+    display: block;
+}
+
+.info span {
+    font-weight: bold;
+    color: #7f5539;
+}
+
+.kesan {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #f0e7df;
+    border-radius: 10px;
+    background: #fbf7f3;
+    text-align: left;
+}
+
+.form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.form h3 {
+    font-size: 18px;
+    color: #b08968;
+    margin-bottom: 10px;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e6ddd5;
+    border-radius: 10px;
+    background: #faf6f2;
+    font-size: 14px;
+    outline: none;
+}
+
+.form textarea {
+    resize: none;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background: #b08968;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form button:hover {
+    background: #9c6f4f;
+}
+
+#daftarPesan {
+    margin-top: 15px;
+}
+
+.pesan-card {
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #f0e7df;
+    border-radius: 10px;
+    background: #fbf7f3;
+}
+
+.pesan-card b {
+    color: #7f5539;
+}
+.hapus-btn {
+    margin-top: 8px;
+    padding: 5px 10px;
+    background: #c1121f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.hapus-btn:hover {
+    background: #9b0f18;
+}
+
+</style>
+</head>
+
+<body>
+<div class="box">
+    <h1>Undangan Pernikahan</h1>
+    <img src="gmbar/images.jfif" alt="Foto Mempelai" class="img-mempelai">
+
+    <div class="info">
+        <p><span>Nama Pengantin:</span><br>
+        Fulan & Fulanah</p>
+
+        <p><span>Lokasi Acara:</span><br>
+        Gedung Serbaguna Bahagia, Jakarta</p>
+
+        <p><span>Waktu:</span><br>
+        Sabtu, 10 Mei 2026 | 10.00 WIB</p>
+    </div>
+
+    <!-- FORM KESAN & PESAN -->
+    <div class="form">
+        <h3>💌 Kesan & Pesan</h3>
+        <input type="text" id="namaPengirim" placeholder="Nama Anda..." />
+        <textarea id="pesan" rows="3" placeholder="Tulis kesan & pesan..."></textarea>
+        <button onclick="kirimPesan()">Kirim</button>
+
+        <div id="daftarPesan"></div>
+    </div>
+
+    <button onclick="kembali()">Kembali</button>
+</div>
+
+<script>
+
+function kirimPesan() {
+  let nama = document.getElementById("namaPengirim").value;
+  let pesan = document.getElementById("pesan").value;
+
+  if (!nama || !pesan) {
+    alert("Nama dan pesan tidak boleh kosong!");
+    return;
+  }
+
+  let daftarPesan = document.getElementById("daftarPesan");
+
+  let div = document.createElement("div");
+  div.className = "pesan-card";
+
+  div.innerHTML = `
+    <b>${nama}</b><br>
+    <p>${pesan}</p>
+    <button class="hapus-btn" onclick="hapusPesan(this)">Hapus</button>
+  `;
+
+  daftarPesan.appendChild(div);
+
+  document.getElementById("namaPengirim").value = "";
+  document.getElementById("pesan").value = "";
+}
+
+function hapusPesan(button) {
+  if (confirm("Yakin ingin menghapus pesan ini?")) {
+    button.parentElement.remove();
+  }
+}
+
+function kembali() {
+  location.href = "index.html";
+}
+
+
+</script>
+</body>
+</html>

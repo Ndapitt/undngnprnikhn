@@ -6,172 +6,140 @@
 <title>Undangan Pernikahan</title>
 
 <style>
-    body {
+body {
     font-family: Arial, sans-serif;
-    background: #f9f4ef;
+    background: #f3ede7;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    padding-top: 20px;
+    padding: 20px;
 }
 
-
 .box {
-    background: white;
-    padding: 30px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: #ffffff;
     max-width: 520px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 h1 {
-    color: #b08968;
-    margin-bottom: 5px;
-}
-
-.subjudul {
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 20px;
+    text-align: center;
+    color: #8b5e3c;
+    margin-bottom: 15px;
 }
 
 .img-mempelai {
     width: 100%;
-    max-width: 300px;
-    border-radius: 12px;
-    margin: 15px auto;
+    max-width: 260px;
     display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+}
+
+.info p {
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .info span {
     font-weight: bold;
-    color: #7f5539;
-}
-
-.kesan {
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #f0e7df;
-    border-radius: 10px;
-    background: #fbf7f3;
-    text-align: left;
-}
-
-.form {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.form h3 {
-    font-size: 18px;
-    color: #b08968;
-    margin-bottom: 10px;
-}
-
-.form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #e6ddd5;
-    border-radius: 10px;
-    background: #faf6f2;
-    font-size: 14px;
-    outline: none;
-}
-
-.form textarea {
-    resize: none;
-}
-
-.form button {
-    width: 100%;
-    padding: 10px;
-    background: #b08968;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.form button:hover {
-    background: #9c6f4f;
-}
-
-#daftarPesan {
-    margin-top: 15px;
-}
-
-.pesan-card {
-    margin-top: 10px;
-    padding: 12px;
-    border: 1px solid #f0e7df;
-    border-radius: 10px;
-    background: #fbf7f3;
-}
-
-.pesan-card b {
-    color: #7f5539;
 }
 
 .lokasi {
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #f0e7df;
+    margin: 18px 0;
+    padding: 12px;
+    background: #f7f1ea;
     border-radius: 10px;
-    background: #fbf7f3;
+    text-align: center;
+    
 }
 
 .lokasi a {
     display: inline-block;
-    margin-top: 8px;
-    padding: 8px 12px;
-    background: #7f5539;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background: #8b5e3c;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 14px;
 }
 
-.lokasi a:hover {
-    background: #6b4a33;
-}
-
-iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    border: 0;
-    margin-top: 10px;
-}
-.terimakasih {
+.form {
     margin-top: 25px;
-    padding: 15px;
-    border: 1px solid #f0e7df;
-    border-radius: 10px;
-    background: #fbf7f3;
-    color: #7f5539;
-    font-size: 14px;
-    line-height: 1.6;
 }
-.btn-kembali {
-    margin-top: 20px;
-    width:40%;
-    background: transparent;
-    color: #7f5539;
-    border-radius: 10px;
+
+.form h3 {
+    color: #8b5e3c;
+    margin-bottom: 8px;
+}
+
+.form textarea {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 8px;
     font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d6c7b8;
+    background: #fdfaf7;
+}
+
+.form button {
+    width: 100%;
+    padding: 9px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
+}
+
+#daftarPesan {
+    margin-top: 12px;
+}
+
+.pesan-card {
+    border: 1px solid #e0d3c6;
+    background: #fdfaf7;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+}
+
+.pesan-header {
+    display: fle
+}
+.btn-kembali {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-kembali:hover {
-    background:red;
-    color: white;
+    background: #a06d4a;
+}
+.terimakasih {
+    text-align: center;
+    margin-top: 25px;
+    padding: 15px;
+    background: #f7f1ea;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.terimakasih p {
+    margin: 8px 0;
+    color: #8b5e3c;
+    font-size: 15px;
 }
 
 
@@ -183,86 +151,88 @@ iframe {
 <div class="box">
     <h1>Undangan Pernikahan</h1>
 
-    <img src="gmbar/images.jfif" alt="Foto Mempelai" class="img-mempelai">
+    <img src="gmbar/images.jfif" class="img-mempelai" alt="Foto Mempelai">
 
     <div class="info">
-        <p><span>Nama Pengantin:</span><br>
-        Fulan & Fulanah</p>
+    <p><span>Nama Pengantin:</span><br>Fulan & Fulanah</p>
 
-         <div class="lokasi">
-        <p><span>📍 Lokasi Pernikahan:</span><br>
-         Gedung Serbaguna Bahagia, Jakarta</p>
+    <p><span>Akad Nikah:</span><br>
+        Sabtu, 10 Mei 2026<br>
+        Pukul 08.00 WIB – Selesai
+    </p>
 
-        <a href="https://www.google.com/maps/search/pondok+riyadhul+ulum,+ujung+batu+timur+jalan+setia+budi"
-       target="_blank">
-       Buka di Google Maps
-       </a>
+    <p><span>Resepsi:</span><br>
+        Sabtu, 10 Mei 2026<br>
+        Pukul 10.00 WIB – Selesai
+    </p>
     </div>
 
-
-        <p><span>Waktu:</span><br>
-        Sabtu, 10 Mei 2026 | 10.00 WIB</p>
+    <div class="lokasi">
+        <p><span>📍 Lokasi Pernikahan:</span><br>Gedung Serbaguna Bahagia, Jakarta</p>
+        <a href="https://www.google.com/maps" target="_blank">Buka Google Maps</a>
     </div>
-   
+
     <div class="form">
         <h3>💌 Kesan & Pesan</h3>
-        <input type="text" id="namaPengirim" placeholder="Nama Anda..." />
+        <input type="text" id="namaPengirim" placeholder="Nama Anda">
         <textarea id="pesan" rows="3" placeholder="Tulis kesan & pesan..."></textarea>
-        <button onclick="kirimPesan()">Kirim</button>
+        <button id="btnKirim">Kirim</button>
 
         <div id="daftarPesan"></div>
     </div>
+
     <div class="terimakasih">
-    <p>
-        Merupakan suatu kehormatan dan kebahagiaan bagi kami
-        apabila Bapak/Ibu/Saudara/i berkenan hadir dan
-        memberikan doa restu.
-
-    <p><b>Atas kehadiran dan doa restunya, kami ucapkan</b></p>
-
-    <p><b>Terima Kasih 🤍</b></p>
-    <button class="btn-kembali" onclick="kembali()">Kembali</button>
+        <p>Kehadiran Anda merupakan kehormatan dan kebahagiaan bagi kami.</p>
+        <p><b>Terima Kasih 🤍</b></p>
+        <button class="btn-kembali" onclick="kembali()">Kembali</button>
     </div>
+
 </div>
+
 <script>
 
+   let inputNama   = document.getElementById("namaPengirim");
+   let inputPesan  = document.getElementById("pesan");
+   let daftarPesan = document.getElementById("daftarPesan");
+   let btnKirim    = document.getElementById("btnKirim");
+
+   btnKirim.addEventListener("click", kirimPesan);
+
 function kirimPesan() {
-  let nama = document.getElementById("namaPengirim").value;
-  let pesan = document.getElementById("pesan").value;
+    const nama  = inputNama.value.trim();
+    const pesan = inputPesan.value.trim();
 
-  if (!nama || !pesan) {
-    alert("Nama dan pesan tidak boleh kosong!");
-    return;
-  }
+    if (nama === "" || pesan === "") {
+        alert("Nama dan pesan tidak boleh kosong!");
+        return;
+    }
 
-  let daftarPesan = document.getElementById("daftarPesan");
+    let card = document.createElement("div");
+    card.className = "pesan-card";
 
-  let div = document.createElement("div");
-  div.className = "pesan-card";
+    card.innerHTML = `
+        <div class="pesan-header">
+            <span class="pesan-nama">${nama}</span>
+        </div>
+        <p>${pesan}</p>
+        <button class="hapus-btn">Hapus</button>
+    `;
 
-  div.innerHTML = `
-    <b>${nama}</b><br>
-    <p>${pesan}</p>
-    <button class="hapus-btn" onclick="hapusPesan(this)">Hapus</button>
-  `;
+    card.querySelector(".hapus-btn").addEventListener("click", () => {
+        card.remove();
+    });
 
-  daftarPesan.appendChild(div);
+    daftarPesan.appendChild(card);
 
-  document.getElementById("namaPengirim").value = "";
-  document.getElementById("pesan").value = "";
+    inputNama.value = "";
+    inputPesan.value = "";
 }
 
-function hapusPesan(button) {
-  if (confirm("Yakin ingin menghapus pesan ini?")) {
-    button.parentElement.remove();
-  }
-}
-
+// ===== FUNGSI KEMBALI =====
 function kembali() {
-  location.href = "index.html";
+    location.href = "index.html";
 }
-
-
 </script>
+
 </body>
 </html>

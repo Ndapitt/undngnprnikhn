@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Selamat Datang</title>
-</head>
-
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -45,6 +43,11 @@ button {
     border-radius: 6px;
     cursor: pointer;
 }
+
+button:hover {
+    background: #a07550;
+}
+
 .nama-tamu {
     font-size: 18px;
     font-weight: bold;
@@ -52,24 +55,26 @@ button {
     margin-bottom: 15px;
 }
 </style>
+</head>
+
 <body>
-   <div class="box">
-    
+<div class="box">
     <h1>Undangan Pernikahan</h1>
 
     <p>Kepada Yth saudara / i</p>
-    <div class="nama-tamu"> Dinda Fitrian Agustin</div>
+    <div class="nama-tamu">Dinda &amp; Partner</div>
 
     <p class="ucapan">
-       Dengan hormat kami mengundang Anda untuk hadir dalam hari bahagia kami.
+        Dengan hormat kami mengundang Anda untuk hadir dalam hari bahagia kami.
     </p>
+
     <button onclick="bukaUndangan()">Buka Undangan</button>
-</div> 
+</div>
+
 <script>
-   function bukaUndangan() {
+function bukaUndangan() {
     window.location.href = "dashbord.html";
 }
 </script>
-
 </body>
 </html>

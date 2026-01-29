@@ -7,13 +7,12 @@
 
 <style>
 body {
-    font-family: Arial, sans-serif;
-    background: #f3ede7;
+    font-family: "Georgia", serif;
+    background: linear-gradient(180deg, #f3ede7, #f9f4ef);
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-
 .box {
     background: #ffffff;
     max-width: 520px;
@@ -33,10 +32,10 @@ h1 {
     width: 100%;
     max-width: 260px;
     display: block;
-    margin: 15px auto;
-    border-radius: 12px;
+    margin: 18px auto;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
-
 .info p {
     margin: 10px 0;
     line-height: 1.5;
@@ -85,6 +84,15 @@ h1 {
     border: 1px solid #d6c7b8;
     background: #fdfaf7;
 }
+.form input {
+    width: 100%;
+    padding: 9px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d6c7b8;
+    background: #fdfaf7;
+}
 
 .form button {
     width: 100%;
@@ -108,13 +116,9 @@ h1 {
     margin-bottom: 4px;
 }
 
-.pesan-card p {
-    color: #5a4b3b; 
-    font-size: 14px;
-}
 
 .pesan-header {
-    display: fle
+    display: flex;
 }
 .btn-kembali {
     margin-top: 12px;
@@ -126,6 +130,14 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+}
+.hapus-btn {
+    margin-top: 6px;
+    background: transparent;
+    border: none;
+    color: #8b5e3c;
+    cursor: pointer;
+    font-size: 13px;
 }
 
 .btn-kembali:hover {
@@ -146,16 +158,43 @@ h1 {
     font-size: 15px;
 }
 .cerita {
-    background: #fdf6f0;
-    padding: 12px 15px;
-    margin: 15px 0;
-    border-radius: 10px;
+    background: #fffaf5;
+    padding: 14px 16px;
+    margin: 18px 0;
+    border-radius: 12px;
     text-align: center;
     font-style: italic;
     color: #6b4f3c;
-    line-height: 1.5;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+    line-height: 1.6;
+    border-left: 3px solid #d6b89c;
 }
+.jadwal {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+.jadwal-card {
+    flex: 1;
+    background: #fffaf5;
+    padding: 14px 10px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e6d6c5;
+}
+
+.jadwal-card span {
+    font-weight: bold;
+    color: #8b5e3c;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.jadwal-card p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #5a4b3b;
+}
+
 
 
 
@@ -166,7 +205,9 @@ h1 {
 <body>
 <div class="box">
     <h1>Undangan Pernikahan</h1>
-
+    <p style="text-align:center; color:#a67c52; font-size:14px;">
+    Dengan penuh cinta
+    </p>
     <img src="gmbar/images.jfif" class="img-mempelai" alt="Foto Mempelai">
 
     <div class="info">
@@ -178,21 +219,24 @@ h1 {
        mereka memutuskan untuk menikah.</p>
     </div>
 
-
-    <p><span>Akad Nikah:</span><br>
-        Sabtu, 10 Mei 2026<br>
-        Pukul 08.00 WIB – Selesai
-    </p>
-
-    <p><span>Resepsi:</span><br>
-        Sabtu, 10 Mei 2026<br>
-        Pukul 10.00 WIB – Selesai
-    </p>
+    <div class="jadwal">
+    <div class="jadwal-card">
+        <span>Akad Nikah</span>
+        <p>Sabtu, 10 Mei 2026</p>
+        <p>08.00 WIB – Selesai</p>
     </div>
-
+    <div class="jadwal-card">
+        <span>🎉 Resepsi</span>
+        <p>Sabtu, 10 Mei 2026</p>
+        <p>10.00 WIB – Selesai</p>
+    </div>
+</div>
     <div class="lokasi">
         <p><span>📍 Lokasi Pernikahan:</span><br>Gedung widya maharany,pekanbaru</p>
-        <a href="https://www.google.com/maps/place/Gedung+Widya+Maharany+(GWM)/@0.5181933,101.3958256,3211m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31d5abd80b342f57:0x9bc2479e7e3bd925!8m2!3d0.5181719!4d101.4061254!16s%2Fg%2F11q2680p9m?entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D target="_blank">Buka Google Maps</a>
+        <a href="https://www.google.com/maps/place/Gedung+Widya+Maharany+(GWM)/@0.5181933,101.3958256,3211m/data=!3m2!1e3!4b1!4m6!3m5!1s0x31d5abd80b342f57:0x9bc2479e7e3bd925!8m2!3d0.5181719!4d101.4061254!16s%2Fg%2F11q2680p9m"
+        target="_blank">
+        Buka Google Maps
+        </a>
     </div>
 
     <div class="form">
@@ -209,9 +253,6 @@ h1 {
         <p><b>Terima Kasih 🤍</b></p>
         <button class="btn-kembali" onclick="kembali()">Kembali</button>
     </div>
-
-</div>
-
 <script>
 
    let inputNama   = document.getElementById("namaPengirim");
@@ -250,8 +291,6 @@ function kirimPesan() {
     inputNama.value = "";
     inputPesan.value = "";
 }
-
-// ===== FUNGSI KEMBALI =====
 function kembali() {
     location.href = "index.html";
 }
